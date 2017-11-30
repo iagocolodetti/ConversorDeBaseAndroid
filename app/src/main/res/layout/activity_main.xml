@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="iagocolodetti.conversordebase.MainActivity"
+    android:background="#303030">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_marginTop="10dp"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/customscrollbar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewR"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:textAlignment="gravity"
+            android:gravity="bottom|center" />
+    </ScrollView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="15dp">
+
+            <Button
+                android:text="@string/bt_converter"
+                android:id="@+id/buttonConverter"
+                android:background="@drawable/btconverter"
+                android:textSize="16sp"
+                android:layout_height="40dp"
+                android:layout_width="140dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:text="@string/tvBase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewDaBase"
+                android:layout_weight="0.5"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="@string/tvPara"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewPara"
+                android:layout_weight="0.25"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <TextView
+                android:text="@string/tvBase"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewParaBase"
+                android:layout_weight="0.5"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp">
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerDaBase"
+                android:layout_weight="0.5"
+                android:background="@android:drawable/spinner_dropdown_background"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textAlignment="gravity" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.25"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:textAlignment="center" />
+
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerParaBase"
+                android:layout_weight="0.5"
+                android:background="@android:drawable/spinner_dropdown_background"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
+                android:textAlignment="gravity" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/editTextBase"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_width="match_parent"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                android:digits="@string/DigitosPermitidos"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="textNoSuggestions" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
